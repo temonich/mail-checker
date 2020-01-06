@@ -1,16 +1,16 @@
 import Imap, { ImapMessage, Box } from 'imap';
 import { simpleParser } from 'mailparser';
 
-import config, { EmailHandler, FilterProc } from '../mail-check-config';
-import ConfigVariable from './configvariable';
+import { EmailHandler, FilterProc } from './types';
+import Cache from './cache';
 import ReadableStream = NodeJS.ReadableStream;
 
 export default class EmailChecker {
   public ph: EmailHandler;
-  public conf: ConfigVariable;
-  constructor(ph: EmailHandler) {
+  public conf: Cache;
+  constructor(cacheDir: string, ph: EmailHandler) {
     this.ph = ph;
-    this.conf = new ConfigVariable(config.cacheDir, this.ph.name);
+    this.conf = new Cache(cacheDir, this.ph.name);
     this.conf.readConfig();
   }
   public connect(imap: Imap): Promise<void> {

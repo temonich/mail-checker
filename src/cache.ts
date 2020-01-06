@@ -1,7 +1,6 @@
 import fs from 'fs';
-import config from '../mail-check-config';
 
-export default class ConfigVariable {
+export default class Cache {
   public lastUpdate: string;
   public prevLastUpdate: string;
   public parser: string;
@@ -12,7 +11,7 @@ export default class ConfigVariable {
   }
   readConfig(): void {
     try {
-      this.lastUpdate = fs.readFileSync(config.cacheDir + this.parser, 'utf8');
+      this.lastUpdate = fs.readFileSync(this.parser, 'utf8');
       const date = new Date(this.lastUpdate);
       if (date.toString() === 'Invalid Date') this.lastUpdate = '';
     } catch (e) {
@@ -23,7 +22,7 @@ export default class ConfigVariable {
   writeConfig(): void {
     if (this.prevLastUpdate === this.lastUpdate) return;
     try {
-      fs.writeFileSync(config.cacheDir + this.parser, this.lastUpdate, {
+      fs.writeFileSync(this.parser, this.lastUpdate, {
         flag: 'w',
       });
     } catch (e) {

@@ -1,8 +1,8 @@
-// парсинг писем.
 import fs from 'fs';
 import { ParsedMail } from 'mailparser';
-import { EmailHandlerClass } from '../mail-check-config';
+import { EmailHandlerClass } from '../../lib/types';
 
+// Example for parsing Email
 export default class EmailHandler implements EmailHandlerClass {
   public file = '';
   public subject = '';

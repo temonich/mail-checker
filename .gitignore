@@ -1,3 +1,6 @@
+!.gitignore
 node_modules
 yarn-error.log
-/dist/
+/lib
+/examples/config.ts
+/examples/cache/*

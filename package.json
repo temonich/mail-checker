@@ -1,21 +1,17 @@
 {
-  "name": "node-with-linting",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/mail-check.ts",
-  "bin": {
-    "parser-price": "./lib/mail-check.js"
-  },
+  "name": "email-checker",
+  "version": "0.0.1",
+  "description": "A Node.js module that check email and parse it",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "debug": "nodemon src/mail-check.ts",
+    "debug": "nodemon examples/index.ts",
     "convert": "ts-jest config:migrate ./jest.config.js",
     "test": "jest --watch",
-    "coverage": "jest --collectCoverageFrom=src/**/*.ts --coverage",
+    "coverage": "jest --passWithNoTests --collectCoverageFrom=src/**/*.ts --coverage",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "lint:list": "eslint */**/*.js --fix",
-    "lint": "eslint */**/*.js --fix",
-    "start:prod": "nodemon src/index.ts"
+    "lint": "eslint */**/*.js --fix"
   },
   "keywords": [],
   "author": "",

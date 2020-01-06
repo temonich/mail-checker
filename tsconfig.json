@@ -4,9 +4,10 @@
     "esModuleInterop": true,
     "target": "es6",
     "noImplicitAny": true,
+    "declaration": true,
     "moduleResolution": "node",
     "sourceMap": false,
-    "outDir": "dist",
+    "outDir": "lib",
     "baseUrl": ".",
     "paths": {
       "*": [
@@ -26,5 +27,6 @@
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "exclude": ["node_modules", "**/__tests__/*"]
 }
