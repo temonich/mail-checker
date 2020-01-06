@@ -46,3 +46,13 @@ all configs is here: config
 
 в файле config.ts в архиве handlers указываются все обработчики: какие ящики проверять и как обрабатывать новые письма.
 в папку cache - сохраняется последняя дата обновления письма.
+=======
+/src/mail-handlers
+Containt all mail handlers. Your own handlers you can add to this folder.
+
+/cache - for save last date parse  
+
+All configs is here: mail-check-config
+
+run: node mail-check.js
+
