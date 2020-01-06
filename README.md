@@ -10,13 +10,12 @@ yarn add dx-email-checker
 ### TypeScript
 Example in folder /examples/
 ```typescript
+import { FilterProc } from 'dx-email-checker/lib/types';
+import EmailChecker from 'dx-email-checker/lib/emailChecker';
+
 const email = new EmailChecker('/cache/', {
     name: 'handlerName',
-    handler: new HandleMailChecker({
-      handlerName: 'autolider',
-      subject: 'Stock',
-      from: 'info@develex.ru',
-    }),
+    handler: new HandleMailChecker(),
     filterProc: FilterProc.onlyNew,
     mailCredentials: {
       user: 'opt2@dokmarket.ru',
