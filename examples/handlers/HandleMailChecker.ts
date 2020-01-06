@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import { ParsedMail } from 'mailparser';
 import { EmailHandlerClass } from '../../lib/types';
 

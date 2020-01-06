@@ -3,8 +3,8 @@ A Node.js module that check email and parse it
 
 ## Installation 
 ```sh
-npm install email-checker --save
-yarn add email-checker
+npm install dx-email-checker --save
+yarn add dx-email-checker
 ```
 ## Usage
 ### TypeScript
@@ -27,8 +27,5 @@ const email = new EmailChecker('/cache/', {
     },
   });
 
-email.check().catch(e => {
-  console.info(e);
-  process.exit(1);
-});
+email.check();
 ```
