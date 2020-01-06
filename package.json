@@ -1,5 +1,5 @@
 {
-  "name": "email-checker",
+  "name": "dx-email-checker",
   "version": "0.0.1",
   "description": "A Node.js module that check email and parse it",
   "main": "lib/index.js",
