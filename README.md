@@ -32,27 +32,3 @@ email.check().catch(e => {
   process.exit(1);
 });
 ```
-
-### Same additional info
-Script for get emails and parse it.
-
- ** /handlers
-contains add handlers.
-HandleMailChecker.ts has example
- 
-all configs is here: config
-
-/cache - for save last date parse 
-
-в файле config.ts в архиве handlers указываются все обработчики: какие ящики проверять и как обрабатывать новые письма.
-в папку cache - сохраняется последняя дата обновления письма.
-=======
-/src/mail-handlers
-Containt all mail handlers. Your own handlers you can add to this folder.
-
-/cache - for save last date parse  
-
-All configs is here: mail-check-config
-
-run: node mail-check.js
-
