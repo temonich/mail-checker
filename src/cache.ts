@@ -7,7 +7,7 @@ export default class Cache {
   constructor(path: string, parser: string) {
     this.prevLastUpdate = '';
     this.lastUpdate = '';
-    this.parser = parser;
+    this.parser = path + '/' + parser;
   }
   readConfig(): void {
     try {
